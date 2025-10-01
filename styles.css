@@ -1,0 +1,345 @@
+:root {
+    --main-color: #ffffff;
+    --black: #6a6aba;
+    --bg: #3f3fd0;
+    --border: 0.3rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    .logo img {
+        height: 70px; /* aumente esse valor conforme quiser */
+      }
+      
+}
+/* ------------------ RESET E BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* ------------------ HEADER ------------------ */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #121212;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+}
+
+.header section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar a {
+  color: #f0f0f0;
+  font-size: 1.6rem;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover {
+  color: #00ffcc;
+  border-bottom: 2px solid #00ffcc;
+}
+
+/* ------------------ ÍCONES ------------------ */
+.icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.icons img {
+  height: 25px;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ------------------ SEÇÕES ------------------ */
+section {
+  padding: 8rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ------------------ BOTÃO ------------------ */
+.btn {
+  background-color: #00ffcc;
+  color: #000;
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00ddb0;
+  letter-spacing: 0.1rem;
+}
+
+/* ------------------ HOME ------------------ */
+.home-container {
+  background: url('./img/home-img.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-container .content {
+  max-width: 60rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4rem;
+  border-radius: 1rem;
+}
+
+.home-container .content h3 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-family: 'Georgia', serif;
+}
+
+.home-container .content p {
+  color: #cccccc;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+/* ------------------ TÍTULOS ------------------ */
+.title {
+  font-size: 4rem;
+  color: #00ffcc;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.title span {
+  color: #ffffff;
+}
+
+/* ------------------ SOBRE ------------------ */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.about .row .content {
+  flex: 1 1 50rem;
+}
+
+.about .row .content h3 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  font-size: 1.6rem;
+  color: #cccccc;
+  line-height: 1.8;
+}
+
+/* ------------------ MENU ------------------ */
+.menu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2.5rem;
+}
+
+.menu .box {
+  background-color: #1e1e2f;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu .box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.menu .box img {
+  height: 10rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.menu .box h3 {
+  font-size: 2rem;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.menu .box .price {
+  font-size: 1.8rem;
+  color: #00ffcc;
+  font-weight: bold;
+}
+/* Container principal da seção */
+section.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* garante centralização vertical */
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  flex-direction: column;
+}
+
+/* Título */
+.title {
+  font-size: 4rem;
+  color: #00ffcc;
+  text-align: center;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+/* Container dos cartões */
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Cada depoimento */
+.box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px 25px;
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box .quote {
+  width: 30px;
+  margin-bottom: 15px;
+}
+
+.box p {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* FOTO CENTRALIZADA */
+.client-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto; /* centraliza horizontalmente */
+  border: 2px solid #ddd;
+  display: block;
+}
+
+/* NOME DO CLIENTE */
+.box h3 {
+  margin: 10px 0;
+  font-size: 1.8rem;
+  color: #222;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* ESTRELAS CENTRALIZADAS */
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.stars img {
+  width: 24px;
+  height: 24px;
+  margin: 0 2px;
+  filter: drop-shadow(0 0 1px #ffc107);
+}
+.testimonial-container {
+  display: flex;
+  flex-direction: column; /* vertical */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.footer{
+  text-align: center;
+
+}
+footer .share{
+  padding: 1rem 0rem;
+}
+ 
+footer .share img{
+  margin: 0.3rem;
+  cursor: pointer;
+  border-radius:50% ;
+  padding: 2rem;
+}
+.footer .share img:hover{
+  background-color: #ffffff;
+}
+.addres .title .inframe{
+  align-items: first baseline;
+}
